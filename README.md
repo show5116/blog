@@ -103,3 +103,14 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 Gatsby Cloud is an end-to-end cloud platform specifically built for the Gatsby framework that combines a modern developer experience with an optimized, global edge network.
 
 <!-- AUTO-GENERATED-CONTENT:END -->
+
+
+```
+gatsby new blog 
+npm i typescript --dev
+npm i gatsby-plugin-typescript 
+tsc --init   
+npm i eslint prettier eslint-config-prettier eslint-plugin-prettier @typescript-eslint/eslint-plugin@latest @typescript-eslint/parser@latest --dev
+npm i gatsby-plugin-advanced-sitemap
+npm i gatsby-plugin-robots-txt
+```
