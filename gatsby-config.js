@@ -1,17 +1,21 @@
+const config = require('./_config');
+const { title, description, author, googleAnalytics, siteUrl, language } = config;
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `youngjin you`,
-    siteUrl: `https://show5116.github.io/blog`,
+    title,
+    description,
+    author,
+    siteUrl,
+    language,
   },
   plugins: [
     `gatsby-plugin-advanced-sitemap`,
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://YOUR-URL.com/',
-        sitemap: 'https://YOUR-URL.com/sitemap.xml',
+        host: siteUrl,
+        sitemap: `${siteUrl}sitemap.xml`,
         policy: [{ userAgent: '*', allow: '/' }],
       },
     },
@@ -33,15 +37,9 @@ module.exports = {
         short_name: `starter`,
         start_url: `/`,
         background_color: `#663399`,
-        // This will impact how browsers show your PWA/website
-        // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/gatsby-icon.png`,
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 }
