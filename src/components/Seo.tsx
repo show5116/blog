@@ -1,16 +1,22 @@
-import * as React from "react";
-import { Helmet } from "react-helmet";
-import { useStaticQuery, graphql } from "gatsby";
+import * as React from 'react';
+import { Helmet } from 'react-helmet';
+import { useStaticQuery, graphql } from 'gatsby';
 
 interface ISeoProps {
-  description? : string;
-  lang? : string;
-  meta? : any[];
-  title? : string;
-  keywords? : string[];
+  description?: string;
+  lang?: string;
+  meta?: any[];
+  title?: string;
+  keywords?: string[];
 }
 
-function Seo({ description='', lang='ko', meta=[], title, keywords } : ISeoProps) {
+function Seo({
+  description = '',
+  lang = 'ko',
+  meta = [],
+  title,
+  keywords,
+}: ISeoProps) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -23,11 +29,11 @@ function Seo({ description='', lang='ko', meta=[], title, keywords } : ISeoProps
           }
         }
       }
-    `
-  )
+    `,
+  );
 
-  const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
+  const metaDescription = description || site.siteMetadata.description;
+  const defaultTitle = site.siteMetadata?.title;
 
   return (
     <Helmet
@@ -35,7 +41,9 @@ function Seo({ description='', lang='ko', meta=[], title, keywords } : ISeoProps
         lang,
       }}
       title={title}
-      titleTemplate={title === defaultTitle ? defaultTitle : `%s | ${defaultTitle}`}
+      titleTemplate={
+        title === defaultTitle ? defaultTitle : `%s | ${defaultTitle}`
+      }
       meta={[
         {
           name: `description`,
@@ -75,7 +83,7 @@ function Seo({ description='', lang='ko', meta=[], title, keywords } : ISeoProps
         },
       ].concat(meta ?? [])}
     />
-  )
+  );
 }
 
-export default Seo
+export default Seo;

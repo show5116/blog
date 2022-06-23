@@ -1,8 +1,8 @@
-import {combineReducers, createStore as reduxCreateStore } from "redux";
-import themeReducer from "./reducer/themeReducer";
+import { combineReducers, createStore as reduxCreateStore } from 'redux';
+import themeReducer from './reducer/themeReducer';
 
 const rootReducer = combineReducers({
-    themeReducer,
+  themeReducer,
 });
 
 const createStore = () => reduxCreateStore(rootReducer);

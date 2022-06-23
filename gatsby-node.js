@@ -1,5 +1,7 @@
 const path = require('path');
 
+exports.createPages = () => {};
+
 // Setup Import Alias
 exports.onCreateWebpackConfig = ({ getConfig, actions }) => {
   const output = getConfig().output || {};

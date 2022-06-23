@@ -1,5 +1,6 @@
 const config = require('./_config');
-const { title, description, author, googleAnalytics, siteUrl, language } = config;
+const { title, description, author, googleAnalytics, siteUrl, language } =
+  config;
 
 module.exports = {
   siteMetadata: {
@@ -11,6 +12,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-advanced-sitemap`,
+    `gatsby-plugin-typescript`,
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
@@ -42,4 +44,4 @@ module.exports = {
       },
     },
   ],
-}
+};
