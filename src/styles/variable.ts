@@ -1,3 +1,4 @@
 export const variable = {
-  headerHeight: '80px',
+  headerHeight: '5rem',
+  pagePadding: `2rem`,
 };

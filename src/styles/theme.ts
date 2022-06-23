@@ -1,7 +1,11 @@
+import { color } from './color';
+
 export const darkTheme = {
-  backgroundColor: '#141414',
+  backgroundColor: `${color.black}`,
+  fontColor: `${color.gray}`,
 };
 
 export const whiteTheme = {
-  backgroundColor: '#e4e4e4',
+  backgroundColor: `${color.white}`,
+  fontColor: `${color.gray}`,
 };
