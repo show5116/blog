@@ -14,6 +14,12 @@ module.exports = {
     `gatsby-plugin-advanced-sitemap`,
     `gatsby-plugin-typescript`,
     {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        disableVendorPrefixes: true,
+      },
+    },
+    {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: siteUrl,
