@@ -3,7 +3,6 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Header from './Header';
 import './layout.css';
 import Footer from 'components/Footer';
-import * as S from './Layout.style';
 
 interface ILayoutProps {
   children: React.ReactNode;
@@ -23,13 +22,11 @@ const Layout = ({ children }: ILayoutProps) => {
 
   return (
     <>
-      <S.Container>
-        <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-        <div>
-          <main>{children}</main>
-          <Footer />
-        </div>
-      </S.Container>
+      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <div>
+        <main>{children}</main>
+        <Footer />
+      </div>
     </>
   );
 };
