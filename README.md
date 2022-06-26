@@ -38,7 +38,7 @@ _Have another more specific idea? You may want to check out our vibrant collecti
 
     _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby Tutorial](https://www.gatsbyjs.com/docs/tutorial/part-4/#use-graphiql-to-explore-the-data-layer-and-write-graphql-queries)._
 
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.tsx`. Save your changes and the browser will update in real time!
 
 ## 🚀 Quick start (Gatsby Cloud)
 
@@ -104,13 +104,6 @@ Gatsby Cloud is an end-to-end cloud platform specifically built for the Gatsby f
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
+gatsby build
 
-```
-gatsby new blog 
-npm i typescript --dev
-npm i gatsby-plugin-typescript 
-tsc --init   
-npm i eslint prettier eslint-config-prettier eslint-plugin-prettier @typescript-eslint/eslint-plugin@latest @typescript-eslint/parser@latest --dev
-npm i gatsby-plugin-advanced-sitemap
-npm i gatsby-plugin-robots-txt
-```
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3defa467-a2f9-4a79-ac06-6cc334f363d7/deploy-status)](https://app.netlify.com/sites/show5116/deploys)

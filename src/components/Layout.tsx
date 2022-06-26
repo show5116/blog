@@ -14,7 +14,6 @@ const Layout = ({ children }: ILayoutProps) => {
     query SiteTitleQuery {
       site {
         siteMetadata {
-          author
           title
         }
       }

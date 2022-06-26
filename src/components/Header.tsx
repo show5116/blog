@@ -4,6 +4,7 @@ import { Link } from 'gatsby';
 import { useEffect, useState } from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 import Nav from 'components/Nav';
+import Side from "components/Side";
 
 interface IHeaderProps {
   siteTitle: string;
@@ -44,6 +45,9 @@ const Header = ({ siteTitle }: IHeaderProps) => {
         <Link to="/">{siteTitle}</Link>
       </S.TitleContainer>
       <Nav />
+      <Side
+        visible={visible}
+      />
     </S.Container>
   );
 };

@@ -14,6 +14,7 @@ export const Container = styled.header<{ visible: boolean }>`
   width: 100%;
   padding-left: ${variable.pagePadding};
   padding-right: ${variable.pagePadding};
+  margin-bottom: 10px;
 `;
 
 export const TitleContainer = styled.div`
