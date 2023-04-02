@@ -1,26 +1,21 @@
-import * as React from "react";
+import * as React from 'react';
 import * as S from './Side.style';
-import * as config from '../../_config';
-import {Link} from "gatsby";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faEnvelope, faLocationDot, faUserCircle} from "@fortawesome/free-solid-svg-icons";
-import {faGithub} from "@fortawesome/free-brands-svg-icons";
+import * as config from '_config';
+import { Link } from 'gatsby';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope, faLocationDot, faUserCircle } from '@fortawesome/free-solid-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 interface ISideProps {
-    visible : boolean;
+    visible: boolean;
 }
 
-const Side = ({visible}:ISideProps) => {
-
-    const {description,author,location,mail,githubName,githubUrl} = config
+const Side = React.memo(({ visible }: ISideProps) => {
+    const { description, author, location, mail, githubName, githubUrl } = config;
 
     return (
-        <S.Container
-            visible={visible}
-        >
-            <S.Description>
-                {description}
-            </S.Description>
+        <S.Container visible={visible}>
+            <S.Description>{description}</S.Description>
             <S.Profile>
                 <li>
                     <Link to="/about">
@@ -37,9 +32,7 @@ const Side = ({visible}:ISideProps) => {
                     {mail}
                 </li>
                 <li>
-                    <a
-                        onClick={()=>window.open(githubUrl)}
-                    >
+                    <a onClick={() => window.open(githubUrl)}>
                         <FontAwesomeIcon icon={faGithub} />
                         {githubName}
                     </a>
@@ -47,6 +40,6 @@ const Side = ({visible}:ISideProps) => {
             </S.Profile>
         </S.Container>
     );
-};
+});
 
 export default Side;

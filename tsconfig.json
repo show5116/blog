@@ -1,23 +1,37 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "module": "commonjs",
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
-    "jsx": "preserve",
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true,
-    "baseUrl": "./src",
-    "paths": {
-      "components/*": ["./components/*"],
-      "utils/*": ["./utils/*"],
-      "hooks/*": ["./hooks/*"]
-    },
-    "esModuleInterop": true,
     "skipLibCheck": true,
+    "strict": false,
     "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "components/*": [
+        "src/components/*"
+      ],
+      "pages/*": [
+        "src/pages/*"
+      ],
+      "styles/*": [
+        "src/styles/*"
+      ],
+      "state/*": [
+        "src/state/*"
+      ],
+      "utils/*": [
+        "src/utils/*"
+      ]
+    },
   },
   "include": ["src/**/*.tsx"],
   "exclude": ["node_modules"]
