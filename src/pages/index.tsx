@@ -1,5 +1,6 @@
 import * as React from 'react';
 import * as S from 'styles/pages/index.style';
+
 import Layout from 'components/layout/Layout';
 import Seo from 'components/layout/Seo';
 import Category from 'components/molecules/Category';

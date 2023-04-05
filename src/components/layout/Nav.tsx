@@ -1,12 +1,15 @@
 import * as React from 'react';
 import * as S from './Nav.style';
+
+import { Link } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAddressCard, faMoon, faSearch, faSun } from '@fortawesome/free-solid-svg-icons';
+
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'gatsby';
 import { RootState } from 'state/createStore';
 import { darkTheme } from 'styles/theme';
 import { setDarkTheme, setWhiteTheme } from 'state/action/themeAction';
+
 import { color } from 'styles/color';
 
 const Nav = React.memo(() => {

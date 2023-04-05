@@ -1,10 +1,12 @@
 import * as React from 'react';
 import * as S from './Header.style';
-import { Link } from 'gatsby';
-import { useEffect, useState } from 'react';
-import { StaticImage } from 'gatsby-plugin-image';
+
 import Nav from 'components/layout/Nav';
 import Side from 'components/layout/Side';
+import { Link } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
+
+import { useEffect, useState } from 'react';
 
 interface IHeaderProps {
     siteTitle: string;

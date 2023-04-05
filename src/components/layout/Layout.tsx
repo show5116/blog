@@ -1,9 +1,11 @@
 import * as React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
-import Header from './Header';
-import './layout.css';
 import * as S from './Layout.style';
+import './layout.css';
+
+import Header from './Header';
 import Footer from 'components/layout/Footer';
+
+import { useStaticQuery, graphql } from 'gatsby';
 
 interface ILayoutProps {
     children: React.ReactNode;

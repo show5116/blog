@@ -1,9 +1,11 @@
 import * as React from 'react';
+
+import { ThemeProvider } from 'styled-components';
+
 import { useEffect } from 'react';
-import { setDarkTheme } from 'state/action/themeAction';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from 'state/createStore';
-import { ThemeProvider } from 'styled-components';
+import { setDarkTheme } from 'state/action/themeAction';
 
 interface IStyledThemeProvider {
     children: React.ReactNode;

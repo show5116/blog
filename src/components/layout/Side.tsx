@@ -1,10 +1,12 @@
 import * as React from 'react';
 import * as S from './Side.style';
-import * as config from '_config';
+
 import { Link } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faLocationDot, faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+
+import * as config from '../../../_config';
 
 interface ISideProps {
     visible: boolean;
